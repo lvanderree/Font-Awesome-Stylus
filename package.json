@@ -4,7 +4,7 @@
   "homepage": "https://github.com/raulghm/Font-Awesome-Stylus",
   "authors": "Raul Hernandez",
   "description": "Stylus port for font-awesome (npm package)",
-  "main": "./stylus/index.styl",
+  "main": "./font-awesome-stylus.js",
   "keywords": [
     "font awesome",
     "font awesome stylus"
