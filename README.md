@@ -28,6 +28,27 @@ $fa-font-path = "http://netdna.bootstrapcdn.com/font-awesome/4.6.2/fonts"
   fa(user)
 ```
 
+### Webpack
+```webpack
+// add as entry
+    "font-awesome": Array.from(glob.sync("./node_modules/font-awesome-stylus/fonts/*\*/*", {nodir: true}), file => '.' + file),
+
+// add loader
+      {
+        test: /\.(otf|ttf|eot|svg|woff(2)?)/,
+        loader: "file?name=fonts/[name].[ext]",
+      },
+
+// add to stylus
+  stylus: {
+    use: [
+//      ...    
+      require("font-awesome-stylus")(),
+    ],
+  },
+```
+
+
 ## Bower support
 ```
 bower install font-awesome-stylus
